@@ -1,0 +1,30 @@
+<div class="buttons-container">
+  <button
+    class="action-btn"
+    [disabled]="selectedOption"
+    (click)="changeDropdownPlaceholder()"
+  >
+    Change the placeholder
+  </button>
+  <button
+    class="action-btn"
+    [disabled]="selectedOption"
+    (click)="changeDropdownOptions()"
+  >
+    Change the set of options
+  </button>
+  <button
+    class="action-btn"
+    [disabled]="!selectedOption"
+    (click)="resetSelectedOption()"
+  >
+    Reset selected option
+  </button>
+</div>
+
+<custom-dropdown
+  [placeholder]="placeholder"
+  [options]="dropdownOptions"
+  [currentValue]="selectedOption"
+  (selectionChange)="onDropdownValueChanged($event)"
+></custom-dropdown>

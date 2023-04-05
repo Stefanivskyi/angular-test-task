@@ -1,0 +1,24 @@
+.buttons-container {
+  display: flex;
+  justify-content: left;
+
+  .action-btn {
+    display: inline-block;
+    font-size: 1em;
+    height: 50px;
+    padding: 0 25px;
+    margin: 15px;
+    background-color: #2EC8FA;
+    color: #1584eb;
+    border-radius: 50px;
+    border-width: 0;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #CCCCCC;
+      color: #666666;
+      cursor: default;
+    }
+  }
+}
